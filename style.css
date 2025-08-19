@@ -1,0 +1,100 @@
+body {
+            background: linear-gradient(135deg, #f8ffae 0%, #43c6ac 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .stopwatch-container {
+            background: #fff;
+            border-radius: 2rem;
+            box-shadow: 0 8px 32px rgba(67, 198, 172, 0.2);
+            padding: 2rem 2.5rem;
+            margin-top: 4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 350px;
+        }
+        .timer {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #43c6ac;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            background: #f8ffae;
+            border-radius: 1rem;
+            padding: 0.5rem 1.5rem;
+            box-shadow: 0 2px 8px rgba(67, 198, 172, 0.1);
+        }
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .controls button {
+            background: linear-gradient(135deg, #43c6ac 60%, #f8ffae 100%);
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.1rem;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(67, 198, 172, 0.15);
+            transition: transform 0.1s;
+        }
+        .controls button:active {
+            transform: scale(0.95);
+        }
+        .controls button.lap {
+            background: linear-gradient(135deg, #f7971e 60%, #ffd200 100%);
+            color: #333;
+        }
+        .controls button.reset {
+            background: linear-gradient(135deg, #ff5858 60%, #f09819 100%);
+        }
+        .laps {
+            width: 100%;
+            margin-top: 1rem;
+            max-height: 180px;
+            overflow-y: auto;
+            border-radius: 1rem;
+            background: #f8ffae;
+            box-shadow: 0 2px 8px rgba(67, 198, 172, 0.08);
+            padding: 0.5rem 1rem;
+        }
+        .laps h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1rem;
+            color: #43c6ac;
+            font-weight: 600;
+        }
+        .lap-item {
+            font-size: 1rem;
+            color: #333;
+            padding: 0.3rem 0;
+            border-bottom: 1px dashed #43c6ac33;
+            display: flex;
+            justify-content: space-between;
+        }
+        .lap-item:last-child {
+            border-bottom: none;
+        }
+        @media (max-width: 400px) {
+            .stopwatch-container {
+                width: 95vw;
+                padding: 1rem;
+            }
+            .timer {
+                font-size: 2rem;
+            }
+            .controls button {
+                width: 45px;
+                height: 45px;
+                font-size: 0.9rem;
+            }
+        }
